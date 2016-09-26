@@ -6,7 +6,7 @@ void AS_CreateStack(ArrayStack** Stack, int Capacity)
 	(*Stack) = (ArrayStack*)malloc(sizeof(ArrayStack));
 
 	// 입력된 Capacity만큼의 노드를 자유 저장소에 저장
-	(*Stack)->Node = (Node*)malloc(sizeof(Node)*Capacity);
+	(*Stack)->Nodes = (Node*)malloc(sizeof(Node)*Capacity);
 
 	// Capacity 및 Top 초기화
 	(*Stack)->Capacity = Capacity;

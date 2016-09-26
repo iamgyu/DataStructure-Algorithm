@@ -2,7 +2,7 @@
 #define ARRAY_STACK_H
 
 #include <iostream>
-#include <stdilb.h>
+#include <stdlib.h>
 
 typedef int ElementType;
 
@@ -15,7 +15,7 @@ typedef struct tagArrayStack
 {
 	int Capacity;	// 스택 용량
 	int Top;		// 최상위 노드 위치
-	Node* Nodes		// 노드 배열 (포인터 배열)
+	Node* Nodes;		// 노드 배열 (포인터 배열)
 }ArrayStack;
 
 void AS_CreateStack(ArrayStack** Stack, int Capacity);		// 스택 생성 함수
