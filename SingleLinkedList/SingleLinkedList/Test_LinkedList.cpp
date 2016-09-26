@@ -44,7 +44,7 @@ int main()
 		printf("List[%d] : %d\n", i, Current->Data);
 	}
 
-	// 모든 노드를 메모리에서 제거
+	// 모든 노드를  메모리에서 제거
 	printf("\nDestroying List...\n");
 
 	for (int i = 0; i < Count; i++)
