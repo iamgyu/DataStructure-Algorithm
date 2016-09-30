@@ -7,25 +7,25 @@
 
 typedef int ElementType;
 
-typedef struct tagHeapNode		// ÈüÀÇ °¢ ³ëµå¸¦ Ç¥Çö
+typedef struct tagHeapNode			// í™ì˜ ê° ë…¸ë“œë¥¼ í‘œí˜„
 {
 	ElementType Data;
 }HeapNode;
 
-typedef struct tagHeap			// Èü ÀÚÃ¼¸¦ Ç¥Çö
+typedef struct tagHeap				// í™ ìì²´ë¥¼ í‘œí˜„
 {
-	HeapNode* Nodes;			// ¹è¿­ÀÇ Å©±â
-	int Capacity;				// ÈüÀÇ ¿ë·®
-	int UsedSize;				// ½ÇÁ¦ ¹è¿­ ¾È¿¡ µé¾î ÀÖ´Â Å¥ ¿ä¼ÒÀÇ ¼ö
+	HeapNode* Nodes;			// ë°°ì—´ì˜ í¬ê¸°
+	int Capacity;				// í™ì˜ ìš©ëŸ‰
+	int UsedSize;				// ì‹¤ì œ ë°°ì—´ ì•ˆì— ë“¤ì–´ ìˆëŠ” í ìš”ì†Œì˜ ìˆ˜
 }Heap;
 
-Heap* HEAP_Create(int InitialSize);						// Èü »ı¼º ÇÔ¼ö
-void HEAP_Destroy(Heap* H);								// Èü ¼Ò¸ê ÇÔ¼ö
-void HEAP_Insert(Heap* H, ElementType NewData);			// ³ëµå »ğÀÔ ÇÔ¼ö
-void HEAP_DeleteMin(Heap* H, HeapNode* Root);			// ÃÖ¼Ú°ª ³ëµå »èÁ¦ ÇÔ¼ö
-int HEAP_GetParent(int Index);							// ºÎ¸ğ ³ëµå¸¦ °¡Á®¿À´Â ÇÔ¼ö
-int HEAP_GetLeftChild(int Index);						// ¿ŞÂÊ ÀÚ½Ä ³ëµå¸¦ °¡Á®¿À´Â ÇÔ¼ö
-void HEAP_SwapNodes(Heap* H, int Index1, int Index2);	// ³ëµå¸¦ ¼­·Î ¹Ù²Ù´Â ÇÔ¼ö
-void HEAP_PrintNodes(Heap* H);							// Èü Ãâ·Â ÇÔ¼ö
+Heap* HEAP_Create(int InitialSize);						// í™ ìƒì„± í•¨ìˆ˜
+void HEAP_Destroy(Heap* H);							// í™ ì†Œë©¸ í•¨ìˆ˜
+void HEAP_Insert(Heap* H, ElementType NewData);					// ë…¸ë“œ ì‚½ì… í•¨ìˆ˜
+void HEAP_DeleteMin(Heap* H, HeapNode* Root);					// ìµœì†Ÿê°’ ë…¸ë“œ ì‚­ì œ í•¨ìˆ˜
+int HEAP_GetParent(int Index);							// ë¶€ëª¨ ë…¸ë“œë¥¼ ê°€ì ¸ì˜¤ëŠ” í•¨ìˆ˜
+int HEAP_GetLeftChild(int Index);						// ì™¼ìª½ ìì‹ ë…¸ë“œë¥¼ ê°€ì ¸ì˜¤ëŠ” í•¨ìˆ˜
+void HEAP_SwapNodes(Heap* H, int Index1, int Index2);				// ë…¸ë“œë¥¼ ì„œë¡œ ë°”ê¾¸ëŠ” í•¨ìˆ˜
+void HEAP_PrintNodes(Heap* H);							// í™ ì¶œë ¥ í•¨ìˆ˜
 
 #endif
