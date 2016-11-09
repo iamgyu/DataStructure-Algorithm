@@ -73,6 +73,7 @@ BTreeNode* BSTInsert(BTreeNode** pRoot, BSTData data)
 	{
 		return NULL;	// 키의 중복을 허용하지 않는다
 	}
+	
 	return *pRoot;
 }
 
